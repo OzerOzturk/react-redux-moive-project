@@ -32,7 +32,7 @@ export const fetchMovies = () => {
     dispatch(FETCH_MOVIE_REQUEST());
     axios
       .get(
-        "https://api.themoviedb.org/3/movie/popular?api_key=700d3a1260c205edbb3e4e388f37e877 "
+        "https://api.themoviedb.org/3/movie/popular?api_key=700d3a1260c205edbb3e4e388f37e877"
       )
       .then((response) => {
         const mostPopularMovies = response.data.results;
