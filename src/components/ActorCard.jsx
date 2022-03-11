@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { Box, Center, Image, Flex, Badge, Text } from "@chakra-ui/react";
+import { MdStar } from "react-icons/md";
 
-const ActorCard = ({ title, vote_average, profile_path }) => {
+const ActorCard = ({ profile_path, name, popularity }) => {
   return (
     <Box
       maxW="180px"
@@ -27,13 +28,13 @@ const ActorCard = ({ title, vote_average, profile_path }) => {
 
       <Flex mt={2} align="center" gap="10px">
         <Text fontSize="sm" fontWeight="semibold" lineHeight="short">
-          {title}
+          {name}
         </Text>
       </Flex>
       <Flex mt={2} align="center">
-        <Box color="orange.400" />
+        <Box as={MdStar} color="orange.400" />
         <Text ml={1} fontSize="sm">
-          <b>{vote_average}</b>
+          <b>{popularity}</b>
         </Text>
       </Flex>
     </Box>

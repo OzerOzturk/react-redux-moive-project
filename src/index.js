@@ -6,39 +6,47 @@ import reportWebVitals from "./reportWebVitals";
 import { configureStore } from "@reduxjs/toolkit";
 import { Provider } from "react-redux";
 import movieReducer from "./features/movies";
-import 'bootstrap/dist/css/bootstrap.min.css';
+import singleMovieReducer from "./features/singleMovie";
+import searchedMovieReducer from "./features/searchedMovies";
+import actorReducer from "./features/actors";
+import { ChakraProvider } from "@chakra-ui/react";
+import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
 
-import {
-  BrowserRouter,
-  Routes,
-  Route,
-} from "react-router-dom";
+import "bootstrap/dist/css/bootstrap.min.css";
 
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-import Actors from "./pages/Actors";
-import Movies from "./pages/Movies";
+import ActorList from "./pages/ActorList";
+import MovieList from "./pages/MovieList";
+
 import Genre from "./pages/Genre";
 
 const store = configureStore({
   reducer: {
     movies: movieReducer,
+    singleMovie: singleMovieReducer,
+    searchedMovies: searchedMovieReducer,
+    actors: actorReducer,
   },
 });
 
 ReactDOM.render(
   <React.StrictMode>
-    <Provider store={store}>
-      
-      <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<App />}/>
-        <Route path="/actors" element={<Actors />}/>
-        <Route path="/movies" element={<Movies />}/>
-        <Route path="/genre" element={<Genre />}/>
-      </Routes>
-
-      </BrowserRouter>
-    </Provider>
+    <ChakraProvider>
+      <Provider store={store}>
+        <BrowserRouter>
+          <Navbar />
+          <Routes>
+            <Route path="/" element={<App />} />
+            <Route path="/ActorList" element={<ActorList />} />
+            <Route path="/MovieList" element={<MovieList />} />
+            <Route path="/genre" element={<Genre />} />
+          </Routes>
+          <Footer />
+        </BrowserRouter>
+      </Provider>
+    </ChakraProvider>
   </React.StrictMode>,
   document.getElementById("root")
 );

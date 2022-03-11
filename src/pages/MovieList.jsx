@@ -1,5 +1,5 @@
 import React from "react";
-import List from "./List";
+import List from "../components/List";
 import { useSelector, useDispatch } from "react-redux";
 import { useEffect, useState } from "react";
 import { fetchMovies } from "../features/movies";
