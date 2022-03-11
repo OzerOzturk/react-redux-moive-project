@@ -14,8 +14,8 @@ import {
 const Footer = () => {
   return (
     <div>
-      <Flex bg="blue.50" color="black">
-        <Box flex="1" bgGradient="linear(to-l, #EBF8FF, #E6FFFA)">
+      <Flex bg="black" color="white">
+        <Box flex="1">
           <Flex
             justify="center"
             align="center"
@@ -30,32 +30,77 @@ const Footer = () => {
           </Flex>
         </Box>
         <Spacer />
-        <Box flex="1" bg="blue.50">
+        <Box flex="1">
           <Flex justify="center" align="start" direction="column" mt="4" ml="4">
             <Text fontWeight="semibold" mb="1" fontSize="lg">
               Sections
             </Text>
-            <Link mb="0.5" href="#">
+            <Link
+              mb="0.5"
+              href="#"
+              _hover={{
+                color: "red.500",
+              }}
+              _focus={{
+                outline: "none",
+              }}
+            >
               Home
             </Link>
-            <Link mb="0.5" href="#">
+            <Link
+              mb="0.5"
+              href="#"
+              _hover={{
+                color: "red.500",
+              }}
+              _focus={{
+                outline: "none",
+              }}
+            >
               Actors
             </Link>
-            <Link mb="0.5" href="#">
+            <Link
+              mb="0.5"
+              href="#"
+              _hover={{
+                color: "red.500",
+              }}
+              _focus={{
+                outline: "none",
+              }}
+            >
               Movies
             </Link>
-            <Link mb="0.5" href="#">
+            <Link
+              mb="0.5"
+              href="#"
+              _hover={{
+                color: "red.500",
+              }}
+              _focus={{
+                outline: "none",
+              }}
+            >
               Signup
             </Link>
-            <Link mb="0.5" href="#">
+            <Link
+              mb="0.5"
+              href="#"
+              _hover={{
+                color: "red.500",
+              }}
+              _focus={{
+                outline: "none",
+              }}
+            >
               Signin
             </Link>
           </Flex>
         </Box>
         <Spacer />
-        <Box flex="1" bg="blue.50">
+        <Box flex="1">
           <Flex justify="center" align="start" direction="column" mt="4" ml="4">
-            <Text fontWeight="semibold" mb="1" fontSize="md">
+            <Text fontWeight="semibold" mb="2" fontSize="md">
               About Us
             </Text>
             <Flex>
@@ -67,7 +112,16 @@ const Footer = () => {
                 borderRadius="50%"
                 mr="1"
               />
-              <Link mb="0.5" href="https://github.com/haticecs">
+              <Link
+                mb="0.5"
+                href="https://github.com/haticecs"
+                _hover={{
+                  color: "red.500",
+                }}
+                _focus={{
+                  outline: "none",
+                }}
+              >
                 Hatice Demir
               </Link>
             </Flex>
@@ -80,7 +134,16 @@ const Footer = () => {
                 borderRadius="50%"
                 mr="1"
               />
-              <Link mb="0.5" href="https://github.com/orkunseyman">
+              <Link
+                mb="0.5"
+                href="https://github.com/orkunseyman"
+                _hover={{
+                  color: "red.500",
+                }}
+                _focus={{
+                  outline: "none",
+                }}
+              >
                 Orkun Seyman
               </Link>
             </Flex>
@@ -93,7 +156,16 @@ const Footer = () => {
                 borderRadius="50%"
                 mr="1"
               />
-              <Link mb="0.5" href="https://github.com/OzerOzturk">
+              <Link
+                mb="0.5"
+                href="https://github.com/OzerOzturk"
+                _hover={{
+                  color: "red.500",
+                }}
+                _focus={{
+                  outline: "none",
+                }}
+              >
                 Özer Öztürk
               </Link>
             </Flex>
@@ -106,19 +178,29 @@ const Footer = () => {
                 borderRadius="50%"
                 mr="1"
               />
-              <Link mb="0.5" href="https://github.com/sebnemgormus">
+              <Link
+                mb="0.5"
+                href="https://github.com/sebnemgormus"
+                _hover={{
+                  color: "red.500",
+                }}
+                _focus={{
+                  outline: "none",
+                }}
+              >
                 Şebnem Görmüş
               </Link>
             </Flex>
           </Flex>
         </Box>
         <Spacer />
-        <Box flex="1" bgGradient="linear(to-l, #E6FFFA,#EBF8FF )" mt="8" mr="2">
+        <Box flex="1" mt="8" mr="2">
           <Image
-            src="https://cdn-icons-png.flaticon.com/512/1101/1101793.png"
+            src="https://images.creativemarket.com/0.1.0/ps/7414066/580/387/m2/fpnw/wm1/logo-design-for-movie-production-company-01-.jpg?1575502358&s=01c0e34a7a49aba80eeeee6e9703b8bc"
             alt="Authentic Movie App Logo"
-            boxSize="100px"
+            boxSize="150px"
             objectFit="cover"
+            mb="2"
           />
         </Box>
       </Flex>
