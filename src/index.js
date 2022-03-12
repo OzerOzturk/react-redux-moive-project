@@ -21,6 +21,7 @@ import ActorList from "./pages/ActorList";
 import MovieList from "./pages/MovieList";
 
 import Genre from "./pages/Genre";
+import SingleMovie from "./components/SingleMovie";
 
 const store = configureStore({
   reducer: {
@@ -38,10 +39,12 @@ ReactDOM.render(
         <BrowserRouter>
           <Navbar />
           <Routes>
+          <Route path="/movies/:id" element={<SingleMovie />} />
             <Route path="/" element={<App />} />
             <Route path="/ActorList" element={<ActorList />} />
             <Route path="/MovieList" element={<MovieList />} />
             <Route path="/genre" element={<Genre />} />
+            
           </Routes>
           <Footer />
         </BrowserRouter>

@@ -43,6 +43,7 @@ const List = ({ listTitle, listData }) => {
             title={item?.title}
             vote_average={item?.vote_average}
             poster_path={item?.poster_path}
+            id={item?.id}
             key={item?.id}
           />
         ))}
